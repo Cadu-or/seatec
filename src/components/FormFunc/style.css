@@ -22,3 +22,10 @@
   flex-direction: column;
   gap: 30px;
 }
+
+.form-container .ant-card-head{
+  background-color: #4FA1C1;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 400;
+}

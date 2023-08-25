@@ -1,0 +1,89 @@
+{
+  "funcionarios": [
+    {
+      "values": {
+        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
+        "CPF": "11258590085",
+        "RG": "41321414",
+        "data_nascimento": "17/02/2000",
+        "cargo": "2"
+      },
+      "id": 2
+    },
+    {
+      "values": {
+        "active": false,
+        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
+        "CPF": "11258590085",
+        "RG": "41321414",
+        "data_nascimento": "17/02/2000",
+        "cargo": "2"
+      },
+      "id": 3
+    },
+    {
+      "values": {
+        "active": false,
+        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
+        "CPF": "11258590085",
+        "RG": "41321414",
+        "sexo": 1,
+        "data_nascimento": "17/02/2000",
+        "cargo": "2"
+      },
+      "id": 4
+    },
+    {
+      "values": {
+        "active": true,
+        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
+        "CPF": "11258590085",
+        "RG": "41321414",
+        "sexo": 1,
+        "data_nascimento": "17/02/2000",
+        "cargo": "2"
+      },
+      "id": 5
+    },
+    {
+      "values": {
+        "Nome": "cacca"
+      },
+      "id": 6
+    },
+    {
+      "values": {
+        "Nome": "cacca"
+      },
+      "id": 7
+    },
+    {
+      "values": {
+        "Nome": "cacca"
+      },
+      "id": 8
+    },
+    {
+      "values": {
+        "Nome": "Daniel Alves da Silva",
+        "CPF": "11258590085",
+        "RG": "41321414",
+        "sexo": 1,
+        "data_nascimento": "17/02/2000",
+        "cargo": "2",
+        "Activitys": [
+          {
+            "activity": "1",
+            "List_EPIS": [
+              {
+                "EPI": "1",
+                "CA": "1"
+              }
+            ]
+          }
+        ]
+      },
+      "id": 9
+    }
+  ]
+}
