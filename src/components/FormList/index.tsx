@@ -4,7 +4,7 @@ import { Button, Form, Input, Select, Space } from "antd";
 export function FormListActivity(){
 
   return(
-    <Form.List name="Activitys">
+    <Form.List name="Activities">
       {(fields, { add, remove }) => (
         <div style={{gap: 10, display:'flex', flexDirection: 'column', marginBottom:10}}>
           {fields.map((field) => (

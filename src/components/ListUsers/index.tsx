@@ -34,7 +34,7 @@ export function ListUsers(){
           {funcionarios.map((funcionario) => (
             <li key={funcionario.id}>
               {funcionario.values.Nome} - {funcionario.values.CPF}
-              {funcionario.values.Activitys?.map((activity : any) => (
+              {funcionario.values.Activities?.map((activity : any) => (
                 <li key={activity.id}>
                   {activity.activity}
                 </li>
