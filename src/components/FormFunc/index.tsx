@@ -1,6 +1,6 @@
 import './style.css';
-import { useEffect, useState } from 'react';
-import { Button, Card, Modal, Switch, Form, Input, Row, Col, Radio, Select, Checkbox, Upload, message, UploadProps, Space} from "antd";
+import {useState } from 'react';
+import { Button, Card, Modal, Switch, Form, Input, Row, Col, Radio, Select, Checkbox, Upload} from "antd";
 import { BackButton } from '../Buttons/Buttons';
 import { FormListActivity } from '../FormList';
 import { ListUsers } from '../ListUsers';
