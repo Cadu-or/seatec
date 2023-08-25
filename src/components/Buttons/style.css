@@ -1,0 +1,15 @@
+.button-navbar{
+  display: flex;
+  items-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.button-navbar span{
+  justify-content: center;
+  display: flex;
+  color: #4FA1C1;
+  font-size: 14px;
+  font-weight: 500;
+}

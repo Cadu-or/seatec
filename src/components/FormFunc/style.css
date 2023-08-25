@@ -1,0 +1,24 @@
+.form-container{
+  width: 100%;
+  margin-right: 5vh;
+  margin-left: 5vh;
+}
+
+.ant-modal-content{
+  width: 800px;
+}
+
+.fields-container{
+  display:'flex';
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #4FA1C1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.forms-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

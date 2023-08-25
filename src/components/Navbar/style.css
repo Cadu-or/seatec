@@ -1,0 +1,25 @@
+.{
+  witdh: 100%;
+  height: 100%;
+}
+
+.navbar-content{
+  justify-content: space-around;
+  display: flex;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+}
+
+.navbar-container{
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  margin: 34px 34px 17px 34px;
+}
+
+.dashed-line {
+  width: 80%;
+  height: 5px;
+  background: repeating-linear-gradient(to right, #4FA1C1, #4FA1C1 0.70%, transparent 0.32%, transparent 1.29%);
+  position: absolute;
+  top: 50%;
+}
