@@ -1,26 +1,31 @@
 import axios from 'axios';
 import './style.css';
-import { Button } from "antd";
+import { Button, Card, Tag } from "antd";
 import { useEffect, useState } from 'react';
+import { EllipsisOutlined } from '@ant-design/icons';
 
 
 
 export function ListUsers(){
   const [funcionarios, setFuncionarios] = useState<any[]>([]);
+  const [filtroAtivo, setFiltroAtiv] = useState(false);
   
   useEffect(() => {
     axios.get('http://localhost:3001/funcionarios')
       .then((response) => {
         setFuncionarios(response.data);
-        console.log(response.data);
       })
       .catch((error) => console.error('Erro na requisição GET:', error));
   }, []);
 
+  const setFilter = () => {
+    {filtroAtivo ? setFiltroAtiv(false) : setFiltroAtiv(true)}
+  };
+
   return(
     <div className="listusers-container">
       <div className="filter-container"> 
-        <Button style={{borderRadius: '10px'}}>
+        <Button style={{borderRadius: '10px'}} onClick={() => setFilter()}>
           Ver apenas ativos
         </Button>
 
@@ -30,18 +35,23 @@ export function ListUsers(){
       </div>
 
       <div className="listusers-content">
-        <ul>
-          {funcionarios.map((funcionario) => (
-            <li key={funcionario.id}>
-              {funcionario.values.Nome} - {funcionario.values.CPF}
-              {funcionario.values.Activities?.map((activity : any) => (
-                <li key={activity.id}>
-                  {activity.activity}
-                </li>
+        {funcionarios.map((funcionario, key) => (
+          <div className='card-content' key={key}>
+            <div className='func-info'>
+              <h1>{funcionario.values.nome}</h1>
+              <Tag color='#4FA1C1' style={{borderRadius: '36px'}}>{funcionario.values.cpf}</Tag>
+              <Tag color='#4FA1C1' style={{borderRadius: '36px'}}> Cargo {funcionario.values.cargo}</Tag>
+              {funcionario['values']['activities']?.map((atividade : any, key : any) => (
+                <Tag key={key} color='#4FA1C1' style={{borderRadius: '36px'}}>{atividade.activity}</Tag>
               ))}
-            </li>
-          ))}
-        </ul>
+            </div>
+            <div>
+              <Button>
+                <EllipsisOutlined style={{fontSize: '25px'}}/>
+              </Button>
+            </div>  
+          </div>
+        ))}
       </div>
 
     </div>    

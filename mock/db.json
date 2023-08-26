@@ -2,9 +2,9 @@
   "funcionarios": [
     {
       "values": {
-        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
-        "CPF": "11258590085",
-        "RG": "41321414",
+        "nome": "Carlos Eduardo de Oliveira Ribeiro",
+        "cpf": "11258590085",
+        "rg": "41321414",
         "data_nascimento": "17/02/2000",
         "cargo": "2"
       },
@@ -12,72 +12,19 @@
     },
     {
       "values": {
-        "active": false,
-        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
-        "CPF": "11258590085",
-        "RG": "41321414",
-        "data_nascimento": "17/02/2000",
-        "cargo": "2"
-      },
-      "id": 3
-    },
-    {
-      "values": {
-        "active": false,
-        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
-        "CPF": "11258590085",
-        "RG": "41321414",
-        "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "2"
-      },
-      "id": 4
-    },
-    {
-      "values": {
-        "active": true,
-        "Nome": "Carlos Eduardo de Oliveira Ribeiro",
-        "CPF": "11258590085",
-        "RG": "41321414",
-        "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "2"
-      },
-      "id": 5
-    },
-    {
-      "values": {
-        "Nome": "cacca"
-      },
-      "id": 6
-    },
-    {
-      "values": {
-        "Nome": "cacca"
-      },
-      "id": 7
-    },
-    {
-      "values": {
-        "Nome": "cacca"
-      },
-      "id": 8
-    },
-    {
-      "values": {
-        "Nome": "Daniel Alves da Silva",
-        "CPF": "11258590085",
-        "RG": "41321414",
+        "nome": "Daniel Alves da Silva",
+        "cpf": "11258590085",
+        "rg": "41321414",
         "sexo": 1,
         "data_nascimento": "17/02/2000",
         "cargo": "2",
-        "Activitys": [
+        "activities": [
           {
             "activity": "1",
-            "List_EPIS": [
+            "list_epis": [
               {
-                "EPI": "1",
-                "CA": "1"
+                "epi": "1",
+                "ca": "1"
               }
             ]
           }

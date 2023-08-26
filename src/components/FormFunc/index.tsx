@@ -62,13 +62,13 @@ export function FormFunc(){
             <div className='fields-container'>
               <Row gutter={24}>
                 <Col span={12}>
-                  <Form.Item name='Nome' label='Nome'>
+                  <Form.Item name='nome' label='Nome'>
                     <Input />
                   </Form.Item>
-                  <Form.Item name='CPF' label='CPF'>
+                  <Form.Item name='cpf' label='CPF'>
                     <Input/>
                   </Form.Item>
-                  <Form.Item name='RG' label='RG'>
+                  <Form.Item name='rg' label='RG'>
                     <Input/>
                   </Form.Item>
                 </Col>

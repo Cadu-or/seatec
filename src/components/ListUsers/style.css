@@ -3,3 +3,35 @@
   display: flex;
   gap: 20px;
 }
+
+.listusers-content h1{
+  font-size: 24px;
+  color: #707070;
+  font-weight: 400;
+}
+
+.listusers-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0px;
+}
+
+.card-content{
+  display: flex;
+  justify-content: space-between;
+  background-color: #EDF1F5;
+  border-radius: 10px;
+}
+
+.card-content Button{
+  align-items: center; 
+  border: none; 
+  height: 100%; 
+  color: white;
+  background-color: #4FA1C1;
+}
+
+.func-info{
+  padding:15px;
+}

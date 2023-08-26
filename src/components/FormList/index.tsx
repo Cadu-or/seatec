@@ -2,7 +2,6 @@ import { MinusCircleOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Select, Space } from "antd";
 
 export function FormListActivity(){
-
   return(
     <Form.List name="Activities">
       {(fields, { add, remove }) => (
