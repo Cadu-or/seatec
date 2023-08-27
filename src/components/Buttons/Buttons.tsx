@@ -1,6 +1,9 @@
 import './style.css';
 import { Building } from '../../assets/images/Building'
 import { Badge, Button } from 'antd';
+import { ArrowLeft } from '@phosphor-icons/react';
+import { useDispatch } from 'react-redux';
+import { changeForm } from '../../redux/formSlice';
 
 interface BuildingButtonProps {
   title: string;
@@ -12,14 +15,10 @@ interface SideButtonProps {
   badge: React.JSX.Element | null;
 }
 
-interface BackButtonProps {
-  onClick: () => void;
-}
-
 export function BuildingButton ({title, status} : BuildingButtonProps){
   return(
     <div className='button-navbar'>
-      <Button type="primary" icon={<Building />} size={'large'} style={{padding: '30px', alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '20px'}} />
+      <Button icon={<Building />} size={'large'} style={{padding: '30px', alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '20px'}} />
       <span>{title}</span>
       {status ? <span> Concluído </span> : <span> </span>}
     </div>
@@ -31,21 +30,27 @@ export function SideButton ({icon, badge} : SideButtonProps){
     <div>
       {badge ?
         <Badge count={badge} >
-          <Button type="default" icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', borderColor: 'none'}} />
+          <Button icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', borderColor: 'none'}} />
         </Badge>
         :
-        <Button type="default" icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', border: 'none'}} />
+        <Button icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', border: 'none'}} />
       }
     </div>
   )
 }
 
-export function BackButton ({ onClick }: BackButtonProps){
+
+export function BackButton (){
+  const dispatch = useDispatch();
+  function handleForm(){
+    dispatch(changeForm())
+  }
   return(
-    <div>
-      <button type="button" onClick={() => onClick()}> Seta </button>
+    <div className='backbutton-container'>
+      <button className='back-button' onClick={() => handleForm()}>
+        <ArrowLeft size={35} color="#FFFFFF" weight="bold" /> 
+      </button>
       <span> Adicionar Funcionário </span>
     </div>
-    
   )
 }

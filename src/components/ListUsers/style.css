@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   gap: 20px;
+  position: relative;
 }
 
 .listusers-content h1{
@@ -10,11 +11,25 @@
   font-weight: 400;
 }
 
+.ant-switch .ant-switch-handle::before{
+  background-color: #4FA1C1;
+}
+
+.ant-switch.ant-switch-checked .ant-switch-inner .ant-switch-inner-checked{
+  color: #3A3A3A;
+}
+
+.ant-switch .ant-switch-inner .ant-switch-inner-unchecked{
+  color: #3A3A3A;
+}
+
 .listusers-content{
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 15px 0px;
+  overflow: auto;
+  height: 280px;
 }
 
 .card-content{
@@ -34,4 +49,10 @@
 
 .func-info{
   padding:15px;
+}
+
+.count-func{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

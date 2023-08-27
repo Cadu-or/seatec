@@ -8,20 +8,23 @@
   flex-direction: column;
 }
 
-.ant-tabs-right >.ant-tabs-nav .ant-tabs-ink-bar{
-  width: 5px;
+.ant-tabs-right{
+  >.ant-tabs-content-holder{
+    border-right: 0px solid;
+  }
+
+  >.ant-tabs-nav{
+    .ant-tabs-ink-bar{
+      width: 5px;
+    }
+    .ant-tabs-tab{
+      padding-left: 12px;
+    }
+  }
 }
 
 .ant-tabs-nav-list{
   width: 58px;
-}
-
-.ant-tabs-right >.ant-tabs-nav .ant-tabs-tab{
-  padding-left: 12px;
-}
-
-.ant-tabs-right >.ant-tabs-content-holder{
-  border-right: 0px solid;
 }
 
 .ant-tabs .ant-tabs-tab.ant-tabs-tab-disabled {

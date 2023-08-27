@@ -1,7 +1,11 @@
 import { MinusCircleOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Select, Space } from "antd";
 
-export function FormListActivity(){
+interface FormListActivityProps{
+  isDisabled: boolean
+}
+
+export function FormListActivity( {isDisabled} : FormListActivityProps){
   return(
     <Form.List name="Activities">
       {(fields, { add, remove }) => (
@@ -14,6 +18,9 @@ export function FormListActivity(){
                 label="Selecione a Atividade:"
               >
                 <Select
+                  bordered={false}
+                  className="input-form"
+                  disabled={isDisabled}
                   style={{ width: "100%" }}
                   options={[
                     { value: "1", label: "Ativid. 1" },
@@ -34,7 +41,8 @@ export function FormListActivity(){
                             label="Selecione o EPI"
                           >
                             <Select
-                              style={{ width: "100%" }}
+                              className="input-form"
+                              bordered={false}
                               options={[
                                 {value: "1", label: "Calçado de Segurança"},
                               ]}
@@ -44,7 +52,7 @@ export function FormListActivity(){
                             name={[field2.name, 'CA']}
                             label="Informe o número do CA"
                           >
-                            <Input style={{ width: "100%" }} />
+                            <Input disabled={isDisabled} className="input-form" />
                           </Form.Item>
                           {fields2.length > 1 ? (
                             <MinusCircleOutlined
@@ -58,6 +66,7 @@ export function FormListActivity(){
                     })}
                     <div className="button-add">
                       <Button
+                        disabled={isDisabled}
                         onClick={() => add()}
                         style={{ width: "20%", border: "none", boxShadow: "unset" }}
                       >
@@ -70,7 +79,7 @@ export function FormListActivity(){
             </div>
           ))}
           <div style={{marginTop: 10, display:'flex', width: '100%'}}>
-            <Button style={{width:"100%" }} onClick={() => {
+            <Button disabled={isDisabled} style={{width:"100%" }} onClick={() => {
               add();
               }}>Adicionar outra atividade</Button>
           </div>

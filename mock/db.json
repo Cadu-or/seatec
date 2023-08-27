@@ -2,35 +2,116 @@
   "funcionarios": [
     {
       "values": {
-        "nome": "Carlos Eduardo de Oliveira Ribeiro",
-        "cpf": "11258590085",
-        "rg": "41321414",
+        "nome": "Carlos Eduardo de Oliveria",
+        "cpf": "20598399046",
+        "rg": "6574637",
+        "sexo": 1,
         "data_nascimento": "17/02/2000",
+        "cargo": "2",
+        "Activities": [
+          {
+            "activity": "1",
+            "List_EPIS": [
+              {
+                "EPI": "1",
+                "CA": "38"
+              }
+            ]
+          }
+        ]
+      },
+      "id": 1
+    },
+    {
+      "values": {
+        "active": true,
+        "nome": "Daniel Alves da Silva",
+        "cpf": "17310928067",
+        "rg": "123456765",
+        "sexo": 1,
+        "data_nascimento": "26/08/2023",
         "cargo": "2"
       },
       "id": 2
     },
     {
       "values": {
-        "nome": "Daniel Alves da Silva",
-        "cpf": "11258590085",
-        "rg": "41321414",
+        "nome": "da Silva",
+        "cpf": "08739183943",
+        "rg": "1231331",
+        "sexo": 1,
+        "data_nascimento": "25/08/2023",
+        "cargo": "2"
+      },
+      "id": 3
+    },
+    {
+      "values": {
+        "nome": "asdasd",
+        "cpf": "12343",
+        "rg": "1231331",
         "sexo": 1,
         "data_nascimento": "17/02/2000",
-        "cargo": "2",
-        "activities": [
-          {
-            "activity": "1",
-            "list_epis": [
-              {
-                "epi": "1",
-                "ca": "1"
-              }
-            ]
-          }
-        ]
+        "cargo": "2"
+      },
+      "id": 4
+    },
+    {
+      "values": {
+        "active": true,
+        "nome": "aedadasdasd",
+        "cpf": "12343",
+        "rg": "1231331",
+        "sexo": 1,
+        "data_nascimento": "17/02/2000",
+        "cargo": "1"
+      },
+      "id": 5
+    },
+    {
+      "values": {
+        "active": true,
+        "nome": "aedadasdasd",
+        "cpf": "12343",
+        "rg": "1231331",
+        "sexo": 1,
+        "data_nascimento": "17/02/2000",
+        "cargo": "1"
+      },
+      "id": 6
+    },
+    {
+      "values": {
+        "active": true,
+        "nome": "qeqeqw",
+        "cpf": "669.917.811-34",
+        "data_nascimento": "12313"
+      },
+      "id": 7
+    },
+    {
+      "values": {
+        "active": false,
+        "nome": "asdasd",
+        "cpf": "669.917.811-34",
+        "rg": "1231331",
+        "sexo": 1,
+        "data_nascimento": "12313",
+        "cargo": "2"
+      },
+      "id": 8
+    },
+    {
+      "values": {
+        "active": true
       },
       "id": 9
+    },
+    {
+      "values": {
+        "active": true
+      },
+      "id": 10
     }
   ]
 }

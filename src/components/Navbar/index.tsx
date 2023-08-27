@@ -1,20 +1,21 @@
 import "./style.css"
 import { BuildingButton } from "../Buttons/Buttons"
-import { useState } from "react"
+import { useSelector } from "react-redux"
+import { RootState } from "../../redux/store"
 
 export function Navbar(){
-  const [status, setStatus] = useState(false)
-
+  const statusFunctionary = useSelector((state:RootState) => state.functionary.isConcluded)
+  
   const items = [
-    {key: '1', title: 'ITEM 1', status: status},
-    {key: '2', title: 'ITEM 1', status: status},
-    {key: '3', title: 'ITEM 1', status: status},
-    {key: '4', title: 'ITEM 1', status: status},
-    {key: '5', title: 'ITEM 1', status: status},
-    {key: '6', title: 'ITEM 1', status: status},
-    {key: '7', title: 'ITEM 1', status: status},
-    {key: '8', title: 'ITEM 1', status: status},
-    {key: '9', title: 'ITEM 1', status: status}
+    {key: '1', title: 'ITEM 1', status: statusFunctionary},
+    {key: '2', title: 'ITEM 1', status: false},
+    {key: '3', title: 'ITEM 1', status: false},
+    {key: '4', title: 'ITEM 1', status: false},
+    {key: '5', title: 'ITEM 1', status: false},
+    {key: '6', title: 'ITEM 1', status: false},
+    {key: '7', title: 'ITEM 1', status: false},
+    {key: '8', title: 'ITEM 1', status: false},
+    {key: '9', title: 'ITEM 1', status: false}
   ]
 
   return(

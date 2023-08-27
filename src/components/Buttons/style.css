@@ -4,6 +4,13 @@
   justify-content: center;
   flex-direction: column;
   gap: 5px;
+  
+}
+
+.button-navbar Button{
+  background-color: #4FA1C1;
+  border: none;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .button-navbar span{
@@ -12,4 +19,16 @@
   color: #4FA1C1;
   font-size: 14px;
   font-weight: 500;
+}
+
+.back-button{
+  display: flex;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.backbutton-container{
+  display: flex;
+  gap: 5px;
 }
