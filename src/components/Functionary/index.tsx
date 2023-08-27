@@ -12,7 +12,7 @@ export function Functionary(){
 
   return (
     <>
-      <Card title="Funcionário(s)" bordered={false}>
+      <Card title="Funcionário(s)" bordered={false} style={{fontFamily: 'Ubuntu'}}>
         <Button onClick={() => handleForm()}style={{border:'1px solid #4FA1C1', width: '100%', borderRadius: '10px', height:60, marginBottom: 15, color: '#4FA1C1'}}>
           + Adicionar Funcionário
         </Button>

@@ -8,6 +8,15 @@
   flex-direction: column;
 }
 
+.blank-element{
+  background-color: white;
+  width: 58px;
+  top: 50px;
+  left: 0;
+  position: absolute;
+  height: 41px;
+}
+
 .ant-tabs-right{
   >.ant-tabs-content-holder{
     border-right: 0px solid;
@@ -16,9 +25,15 @@
   >.ant-tabs-nav{
     .ant-tabs-ink-bar{
       width: 5px;
+      background: white;
     }
     .ant-tabs-tab{
       padding-left: 12px;
+
+      .anticon{
+        margin-right: 4px;
+      }
+
     }
   }
 }
@@ -29,4 +44,13 @@
 
 .ant-tabs .ant-tabs-tab.ant-tabs-tab-disabled {
   cursor: pointer;
+}
+
+.badge-icon{
+  color: #4FA1C1;
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+  z-index: 9999;
+  margin-top: 35px;
 }

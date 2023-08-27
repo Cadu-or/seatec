@@ -2,19 +2,20 @@
   "funcionarios": [
     {
       "values": {
-        "nome": "Carlos Eduardo de Oliveria",
-        "cpf": "20598399046",
-        "rg": "6574637",
+        "active": true,
+        "nome": "Daniel Alves da Silva",
+        "cpf": "05898990070",
+        "rg": "350844410",
         "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "2",
+        "data_nascimento": "1990-05-17T14:35:15.284Z",
+        "cargo": "1",
         "Activities": [
           {
-            "activity": "1",
+            "activity": "Ativ 1",
             "List_EPIS": [
               {
                 "EPI": "1",
-                "CA": "38"
+                "CA": "42"
               }
             ]
           }
@@ -25,93 +26,112 @@
     {
       "values": {
         "active": true,
-        "nome": "Daniel Alves da Silva",
-        "cpf": "17310928067",
-        "rg": "123456765",
-        "sexo": 1,
-        "data_nascimento": "26/08/2023",
-        "cargo": "2"
+        "nome": "Giselle Torres Lopes",
+        "cpf": "27604149065",
+        "rg": "1231331",
+        "sexo": 2,
+        "data_nascimento": "1998-08-13T14:51:32.375Z",
+        "cargo": "2",
+        "Activities": [
+          {
+            "activity": "Ativ 2",
+            "List_EPIS": [
+              {
+                "EPI": "2",
+                "CA": "2"
+              }
+            ]
+          }
+        ]
       },
       "id": 2
     },
     {
       "values": {
-        "nome": "da Silva",
-        "cpf": "08739183943",
-        "rg": "1231331",
+        "active": false,
+        "nome": "Carlos Eduardo",
+        "cpf": "95123375090",
+        "rg": "371185993",
         "sexo": 1,
-        "data_nascimento": "25/08/2023",
-        "cargo": "2"
+        "data_nascimento": "2000-02-17T14:14:09.259Z",
+        "cargo": "6",
+        "Activities": [
+          {}
+        ]
       },
       "id": 3
     },
     {
       "values": {
-        "nome": "asdasd",
-        "cpf": "12343",
-        "rg": "1231331",
-        "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "2"
+        "active": false,
+        "nome": "Maria da Silva",
+        "cpf": "52184640077",
+        "rg": "456372637",
+        "sexo": 2,
+        "data_nascimento": "1999-07-16T15:24:58.345Z",
+        "cargo": "6",
+        "Activities": [
+          {
+            "activity": "Ativ 2",
+            "List_EPIS": [
+              {
+                "EPI": "5",
+                "CA": "5"
+              },
+              {
+                "EPI": "2",
+                "CA": "12"
+              }
+            ]
+          },
+          {
+            "activity": "Ativ 6",
+            "List_EPIS": [
+              {
+                "EPI": "4",
+                "CA": "3"
+              }
+            ]
+          }
+        ]
       },
       "id": 4
     },
     {
       "values": {
         "active": true,
-        "nome": "aedadasdasd",
-        "cpf": "12343",
-        "rg": "1231331",
+        "nome": "Allan Santos Barbosa",
+        "cpf": "81440436002",
+        "rg": "290839348",
         "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "1"
+        "data_nascimento": "2014-08-12T15:33:59.926Z",
+        "cargo": "3",
+        "Activities": [
+          {
+            "activity": "Ativ 1",
+            "List_EPIS": [
+              {
+                "EPI": "2",
+                "CA": "2"
+              },
+              {
+                "EPI": "6",
+                "CA": "23"
+              }
+            ]
+          },
+          {
+            "activity": "Ativ 3",
+            "List_EPIS": [
+              {
+                "EPI": "2",
+                "CA": "23"
+              }
+            ]
+          }
+        ]
       },
       "id": 5
-    },
-    {
-      "values": {
-        "active": true,
-        "nome": "aedadasdasd",
-        "cpf": "12343",
-        "rg": "1231331",
-        "sexo": 1,
-        "data_nascimento": "17/02/2000",
-        "cargo": "1"
-      },
-      "id": 6
-    },
-    {
-      "values": {
-        "active": true,
-        "nome": "qeqeqw",
-        "cpf": "669.917.811-34",
-        "data_nascimento": "12313"
-      },
-      "id": 7
-    },
-    {
-      "values": {
-        "active": false,
-        "nome": "asdasd",
-        "cpf": "669.917.811-34",
-        "rg": "1231331",
-        "sexo": 1,
-        "data_nascimento": "12313",
-        "cargo": "2"
-      },
-      "id": 8
-    },
-    {
-      "values": {
-        "active": true
-      },
-      "id": 9
-    },
-    {
-      "values": {
-        "active": true
-      },
-      "id": 10
     }
   ]
 }

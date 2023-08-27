@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  font-weight: 700;
 }
 
 .form-container .ant-card-head{
@@ -34,4 +35,16 @@
   font-size: 28px;
   color: #ffffff;
   font-weight: 400;
+}
+
+:where(.css-dev-only-do-not-override-1rotkkn).ant-switch:hover:not(.ant-switch-disabled) {
+  background: #D2D2D2;
+}
+
+.ant-switch.ant-switch-checked {
+  background: #D7ECFF;
+}
+
+:where(.css-dev-only-do-not-override-1rotkkn).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  background: #D7ECFF;
 }

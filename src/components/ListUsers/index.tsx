@@ -14,7 +14,7 @@ export function ListUsers(){
   const dispatch = useDispatch();
   
   useEffect(() => {
-    axios.get('http://localhost:3001/funcionarios')
+    axios.get('http://localhost:3001/funcionarios?_sort=values.nome')
       .then((response) => {
         setFuncionarios(response.data);
         setCountFuncionarios(response.data.length);
@@ -30,7 +30,7 @@ export function ListUsers(){
 
   const handleFilterActive = async() => {
     try {
-      await axios.get('http://localhost:3001/funcionarios?values.active=true')
+      await axios.get('http://localhost:3001/funcionarios?values.active=true&_sort=values.nome')
       .then((response) => {
         setFuncionarios(response.data);
       })
@@ -41,7 +41,7 @@ export function ListUsers(){
 
   const handleClearFilter = async() => {
     try {
-      await axios.get('http://localhost:3001/funcionarios')
+      await axios.get('http://localhost:3001/funcionarios?_sort=values.nome')
       .then((response) => {
         setFuncionarios(response.data);
       })
@@ -76,11 +76,12 @@ export function ListUsers(){
           <div className='card-content' key={key}>
             <div className='func-info'>
               <h1>{funcionario.values.nome}</h1>
-              <Tag color='#4FA1C1' style={{borderRadius: '36px'}}>{funcionario.values.cpf}</Tag>
-              <Tag color='#4FA1C1' style={{borderRadius: '36px'}}> Cargo {funcionario.values.cargo}</Tag>
-              {funcionario['values']['activities']?.map((atividade : any, key : any) => (
-                <Tag key={key} color='#4FA1C1' style={{borderRadius: '36px'}}>{atividade.activity}</Tag>
-              ))}
+              <Tag color='#4FA1C1' style={{borderRadius: '36px', fontSize: '14px'}}>{funcionario.values.cpf.slice(0,3)}.{funcionario.values.cpf.slice(3,6)}.{funcionario.values.cpf.slice(6,9)}-{funcionario.values.cpf.slice(9,11)}</Tag>
+              { funcionario['values']['Activities'][0]['activity'] !== undefined ?
+                funcionario['values']['Activities']?.map((atividade : any, key : any) => (
+                <Tag key={key} color='#4FA1C1' style={{borderRadius: '36px', fontSize: '14px'}}>{atividade.activity}</Tag>
+                )) : null}
+              <Tag color='#4FA1C1' style={{borderRadius: '36px', fontSize: '14px'}}> Cargo {funcionario.values.cargo}</Tag>
             </div>
             <div>
               <Button>
@@ -97,8 +98,4 @@ export function ListUsers(){
       </div>
     </div>    
   )
-}
-
-function dispatch(arg0: { payload: undefined; type: "functionary/changeFunctionary"; }) {
-  throw new Error('Function not implemented.');
 }

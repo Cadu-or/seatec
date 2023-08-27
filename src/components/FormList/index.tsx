@@ -1,5 +1,7 @@
 import { MinusCircleOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Select, Space } from "antd";
+import { useEffect, useState } from "react";
+import { activityOptions, epiOptions } from "../Variables";
 
 interface FormListActivityProps{
   isDisabled: boolean
@@ -8,25 +10,22 @@ interface FormListActivityProps{
 export function FormListActivity( {isDisabled} : FormListActivityProps){
   return(
     <Form.List name="Activities">
-      {(fields, { add, remove }) => (
+      {(fields, { add }) => (
         <div style={{gap: 10, display:'flex', flexDirection: 'column', marginBottom:10}}>
           {fields.map((field) => (
             <div className="fields-container" key={field.key} >
               <Form.Item
                 name={[field.name, 'activity']} 
-                style={{marginBottom: 50}} 
+                style={{marginBottom: 20}} 
                 label="Selecione a Atividade:"
+                required tooltip="Campo Obrigatório"
+                rules={[{ required: !isDisabled, message: 'Esse campo é obrigatório'}]}
               >
                 <Select
+                  disabled={isDisabled}
                   bordered={false}
                   className="input-form"
-                  disabled={isDisabled}
-                  style={{ width: "100%" }}
-                  options={[
-                    { value: "1", label: "Ativid. 1" },
-                    { value: "2", label: "Ativid. 2" },
-                    { value: "3", label: "Ativid. 3" },
-                  ]}
+                  options={activityOptions}
                 />
               </Form.Item>
               <Form.List name={[field.name, 'List_EPIS']}>
@@ -34,23 +33,26 @@ export function FormListActivity( {isDisabled} : FormListActivityProps){
                   <>
                     {fields2.map((field2, index) => {
                       return (
-                        <Space style={{ display: "flex", marginBottom: 8 }} key={field2.key}>
+                        <Space style={{ display: "flex"}} key={field2.key}>
                           <Form.Item
                             name={[field2.name, 'EPI']}
                             style={{ width: "200px" }}
                             label="Selecione o EPI"
+                            required tooltip="Campo Obrigatório"
+                            rules={[{ required: !isDisabled, message: 'Esse campo é obrigatório'}]}
                           >
                             <Select
+                              disabled={isDisabled}
                               className="input-form"
                               bordered={false}
-                              options={[
-                                {value: "1", label: "Calçado de Segurança"},
-                              ]}
+                              options={epiOptions}
                             />
                           </Form.Item>
                           <Form.Item
                             name={[field2.name, 'CA']}
                             label="Informe o número do CA"
+                            required tooltip="Campo Obrigatório"
+                            rules={[{ required: !isDisabled, message: 'Esse campo é obrigatório'}]}
                           >
                             <Input disabled={isDisabled} className="input-form" />
                           </Form.Item>
@@ -79,7 +81,7 @@ export function FormListActivity( {isDisabled} : FormListActivityProps){
             </div>
           ))}
           <div style={{marginTop: 10, display:'flex', width: '100%'}}>
-            <Button disabled={isDisabled} style={{width:"100%" }} onClick={() => {
+            <Button disabled={isDisabled} className="input-form" onClick={() => {
               add();
               }}>Adicionar outra atividade</Button>
           </div>

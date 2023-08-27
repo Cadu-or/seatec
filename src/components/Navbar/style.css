@@ -3,12 +3,13 @@
   display: flex;
   padding-top: 3vh;
   padding-bottom: 1vh;
+  font-family: 'Ubuntu';
 }
 
 .navbar-container{
   background-color: #FFFFFF;
   border-radius: 20px;
-  margin: 34px 34px 17px 34px;
+  margin: 19px 34px 17px 34px;
 }
 
 .dashed-line {
@@ -16,5 +17,5 @@
   height: 5px;
   background: repeating-linear-gradient(to right, #4FA1C1, #4FA1C1 0.70%, transparent 0.32%, transparent 1.29%);
   position: absolute;
-  top: 50%;
+  top: 43%;
 }

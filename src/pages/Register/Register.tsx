@@ -15,19 +15,19 @@ export function Register (){
 
   return(
     <Space.Compact block direction="horizontal">
-      <Sider width={'58px'} style={{ minHeight: '100', backgroundColor: '#F2F2F2'}}>
+      <Sider width={'58px'} style={{ minHeight: '100', backgroundColor: '#F2F2F2', zIndex: 999}}>
         <Sidebar />
       </Sider>
       <Layout>
         <Content>
           <Row gutter={16}>
-            <Col className="gutter-row" span={24}>
+            <Col className="gutter-row" span={24} style={{backgroundColor: '#F2F2F2'}}>
               <Navbar />
             </Col>
-            <Col className="gutter-row" span={8} style={{display:'flex', justifyContent:'end'}}>
+            <Col className="gutter-row" span={8} style={{display:'flex', justifyContent:'end', backgroundColor: '#F2F2F2'}}>
               <DescriptionSpace />
             </Col>
-            <Col className="gutter-row" span={16} style={{display:'flex', flexDirection: 'column', justifyContent:'start'}}>
+            <Col className="gutter-row" span={16} style={{display:'flex', flexDirection: 'column', justifyContent:'start', backgroundColor: '#F2F2F2'}}>
               <div className="form-container">
                 { showForm ?
                   <Forms/>

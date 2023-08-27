@@ -18,9 +18,9 @@ interface SideButtonProps {
 export function BuildingButton ({title, status} : BuildingButtonProps){
   return(
     <div className='button-navbar'>
-      <Button icon={<Building />} size={'large'} style={{padding: '30px', alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '20px'}} />
+      <Button icon={<Building />} size={'large'} style={{padding: '30px', alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '20px', margin: 'auto'}} />
       <span>{title}</span>
-      {status ? <span> Concluído </span> : <span> </span>}
+      {status ? <span> CONCLUÍDO </span> : <span style={{visibility: 'hidden'}}> CONCLUÍDO </span>}
     </div>
   )
 }
@@ -30,7 +30,7 @@ export function SideButton ({icon, badge} : SideButtonProps){
     <div>
       {badge ?
         <Badge count={badge} >
-          <Button icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', borderColor: 'none'}} />
+          <Button icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', border: 'none'}} />
         </Badge>
         :
         <Button icon={icon} style={{padding:'16px',alignItems: 'center', justifyContent: 'center', display: 'flex', borderRadius: '10px', border: 'none'}} />
@@ -48,7 +48,7 @@ export function BackButton (){
   return(
     <div className='backbutton-container'>
       <button className='back-button' onClick={() => handleForm()}>
-        <ArrowLeft size={35} color="#FFFFFF" weight="bold" /> 
+        <ArrowLeft size={35} color="#FFFFFF" weight="bold" cursor={'pointer'}/> 
       </button>
       <span> Adicionar Funcionário </span>
     </div>
